@@ -1,31 +1,96 @@
+@keyframes movingBackground {
+  0% { opacity: 0.9; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  padding: 20px;
+  background: url('/workspaces/perfil-sofia-/src/25557.webp');
+  background-size: cover;
+  animation: movingBackground 3s linear infinite;
+  overflow-x: hidden; 
+  height: 100vh;
+}
+.App-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
   color: white;
+  border-radius: 10px;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.App-title {
+  animation: fadeIn 2s ease-in-out;
+  font-size: 2em;
+  margin: 5px 0;
+  
 }
 
-.heart {
-  color: #ff0000;
+.App-subtitle {
+  font-size: 1.2em;
+  margin: 0;
 }
 
-.small {
-  font-size: 0.75rem;
+.Skills,
+.Projects {
+  margin-top: 30px;
+}
+.Projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.Project {
+  
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Project h3 {
+  color: #66bbe2;
+}
+
+.Skills ul,
+.Projects ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.Skills li,
+.Projects li {
+  margin: 0 15px;
+  padding: 10px;
+  background-color: #66bbe2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Skills li:hover,
+.Projects li:hover {
+  background-color: #4a90e2;
+}
+ .Skills h2 {
+  color: rgb(219, 219, 13);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  animation: fadeIn 2s ease-in-out; 
+  font-family: Georgia, 'Times New Roman', Times, serif;  
+  font-size: 2.5em;
 }
